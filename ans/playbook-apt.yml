@@ -1,0 +1,17 @@
+---
+- name: Copying files from controller to host
+  hosts: planetexpress
+  gather_facts: yes
+
+  tasks:
+
+    - name: Apt update
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: Install apt packages
+      apt:
+        name: apache2
+        state: present
+      become: yes
