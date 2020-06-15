@@ -14,12 +14,8 @@
 
     - name: Install apt packages
       apt:
-        name: sl
-        state: "{{ mpresent }}"
-      become: yes
-
-    - name: Install another apt package
-      apt:
-        name: figlet
+        name: 
+          - sl
+          - figlet
         state: "{{ mpresent }}"
       become: yes

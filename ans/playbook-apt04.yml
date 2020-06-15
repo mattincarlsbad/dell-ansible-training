@@ -5,6 +5,8 @@
 
   vars:
     mpresent: present
+    mapps: [sl,figlet]
+
   tasks:
 
     - name: Apt update
@@ -14,12 +16,6 @@
 
     - name: Install apt packages
       apt:
-        name: sl
-        state: "{{ mpresent }}"
-      become: yes
-
-    - name: Install another apt package
-      apt:
-        name: figlet
+        name: "{{ mapps }}" 
         state: "{{ mpresent }}"
       become: yes
