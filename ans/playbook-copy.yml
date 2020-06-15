@@ -8,3 +8,9 @@
       copy:
         src: ~/dell-ansible-training/ans/files/fry.txt
         dest: ~/fry.txt
+        
+    - name: Create a directory
+      file:
+        path: ~/newdir
+        state: directory
+        mode: '0755'
