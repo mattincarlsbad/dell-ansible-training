@@ -13,9 +13,18 @@
       apt:
         update_cache: yes
       become: yes
+      when: ansible_distribution == "Ubuntu"
 
     - name: Install apt packages
       apt:
         name: "{{ mapps }}" 
         state: "{{ mpresent }}"
       become: yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Install yum package
+      yum:
+        name: "{{ mapps }}"
+        state: "{{ mpresent }}"
+      become: yes
+      when: ansible_distribution == "Centos"
