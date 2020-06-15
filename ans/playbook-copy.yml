@@ -1,0 +1,10 @@
+---
+- name: Copying files from controller to host
+  hosts: planetexpress
+
+  tasks:
+
+    - name: Copy Fry's resume to hosts
+      copy:
+        src: ~/dell-ansible-training/ans/files/fry.txt
+        dest: ~/fry.txt
