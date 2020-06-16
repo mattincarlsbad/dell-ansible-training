@@ -4,11 +4,7 @@
   gather_facts: no
 
   vars:   # vars available to all tasks
-    ethList:
-      - "eth0"
-      - "eth1"
-      - "eth2"
-      - "eth3"
+    ethList: ["eth0","eth1","eth2","eth3"]
 
   tasks:
     - name: Demo a tiny loop

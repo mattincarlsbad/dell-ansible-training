@@ -1,0 +1,13 @@
+---
+- name: Loop with pauses
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Debug a loop with pause
+      debug:
+              var: item
+      loop: [server1,server2,server3]
+      loop_control:
+              pause: 3
+
