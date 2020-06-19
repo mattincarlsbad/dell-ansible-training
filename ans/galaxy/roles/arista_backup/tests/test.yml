@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - /home/student/dell-ansible-training/ans/galaxy/roles/arista_backup
